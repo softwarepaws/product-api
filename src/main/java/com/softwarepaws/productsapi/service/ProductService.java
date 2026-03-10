@@ -9,15 +9,18 @@ import com.softwarepaws.productsapi.repository.ProductRepository;
 
 @Service
 public class ProductService implements IProductService {
-	
+
 	private ProductRepository productRepository;
-	
-	public ProductService(ProductRepository productRepository) {
+	private UpcItemClient itemClient;
+
+	public ProductService(ProductRepository productRepository, UpcItemClient itemClient) {
+		super();
 		this.productRepository = productRepository;
+		this.itemClient = itemClient;
 	}
 
 	@Override
-	public Product saveProduct(Product product) {
+	public Product createProduct(Product product) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -54,6 +57,12 @@ public class ProductService implements IProductService {
 
 	@Override
 	public Product getProductByMpn(String mpn) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Product updateProduct(Product product) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -99,5 +108,7 @@ public class ProductService implements IProductService {
 		// TODO Auto-generated method stub
 		
 	}
+
+	
 
 }
